@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "telegram": {
+      "command": "npx",
+      "args": ["-y", "@overpod/mcp-telegram"],
+      "env": {
+        "TELEGRAM_API_ID": "${TELEGRAM_API_ID}",
+        "TELEGRAM_API_HASH": "${TELEGRAM_API_HASH}"
+      }
+    },
+    "raindrop": {
+      "type": "http",
+      "url": "https://api.raindrop.io/rest/v2/ai/mcp"
+    },
+    "pipedream": {
+      "type": "http",
+      "url": "https://remote.mcp.pipedream.net/v3",
+      "headersHelper": "bash scripts/pipedream-mcp-headers.sh"
+    }
+  }
+}
